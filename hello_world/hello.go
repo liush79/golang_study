@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func main() {
@@ -96,24 +95,26 @@ func main() {
 	// channel()
 	// channelBuffering()
 	// time.Sleep(time.Second * 1)
-	fmt.Println("----------------- multi consumer test ---------------")
-	// consumer 1
-	ccc := make(chan int)
-	go createConsumer(ccc, 1)
-	// consumer 2
-	go createConsumer(ccc, 2)
-	// producer
-	for i := 0; i < 10; i++ {
-		ccc <- i
-	}
-	fmt.Println("NOT Support multi consumer -------------------------")
-	fmt.Println("----------------select test ------------------")
-	testSelect()
-	fmt.Println("--------------------------------------")
-	time.Sleep(time.Second * 1)
-	testSync()
-	fmt.Println("-------------------- rw Mutex -------")
-	time.Sleep(time.Second * 1)
+	// fmt.Println("----------------- multi consumer test ---------------")
+	// // consumer 1
+	// ccc := make(chan int)
+	// go createConsumer(ccc, 1)
+	// // consumer 2
+	// go createConsumer(ccc, 2)
+	// // producer
+	// for i := 0; i < 10; i++ {
+	// 	ccc <- i
+	// }
+	// fmt.Println("NOT Support multi consumer -------------------------")
+	// fmt.Println("----------------select test ------------------")
+	// testSelect()
+	// fmt.Println("--------------------------------------")
+	// time.Sleep(time.Second * 1)
+	// testSync()
+	// fmt.Println("-------------------- rw Mutex -------")
+	// time.Sleep(time.Second * 1)
+	fmt.Println("-------------------- file  -------")
+	testFiles()
 	fmt.Println("Finish !")
 }
 
