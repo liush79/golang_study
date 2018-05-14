@@ -115,6 +115,10 @@ func main() {
 	// time.Sleep(time.Second * 1)
 	fmt.Println("-------------------- file  -------")
 	testFiles()
+	fmt.Println("-------------------- json  -------")
+	testJson()
+	fmt.Println("-------------------- encrypt  -------")
+	testEncrypt()
 	fmt.Println("Finish !")
 }
 
